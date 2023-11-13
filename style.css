@@ -1,9 +1,12 @@
 * {font-family: monospace;}
 h3 {
-    color: rgb(184, 184, 184);
+    color: rgb(164, 164, 164);
 }
 h1 {
     color: white;
+}
+p {
+    color: rgb(164, 164, 164);
 }
 body {
     background-color: rgb(20, 20, 20);
