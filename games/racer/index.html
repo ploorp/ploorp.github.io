@@ -1,94 +1,94 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-  <title>Racer</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <link href="common.css" rel="stylesheet" type="text/css" />
-</head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Racer</title>
+</head>
 
-<body> 
-
-  <table id="controls" style="display:none">
-    <tr>
-      <td colspan="2">
-        <a href='v1.straight.html'>straight</a> |
-        <a href='v2.curves.html'>curves</a>     |
-        <a href='v3.hills.html'>hills</a>       |
-        <a href='v4.final.html'>final</a>
-      </td>
-    </tr>
-    <tr><td id="fps" colspan="2" align="right"></td></tr>
-    <tr>
-      <th><label for="resolution">Resolution :</label></th>
-      <td>
-        <select id="resolution" style="width:100%">
-          <option selected value='fine'>Fine (1280x960)</option>
-          <option value='high'>High (1024x768)</option>
-          <option value='medium'>Medium (640x480)</option>
-          <option value='low'>Low (480x360)</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <th><label for="lanes">Lanes :</label></th>
-      <td>
-        <select id="lanes">
-          <option>1</option>
-          <option>2</option>
-          <option selected>3</option>
-          <option>4</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <th><label for="roadWidth">Road Width (<span id="currentRoadWidth"></span>) :</label></th>
-      <td><input id="roadWidth" type='range' min='500' max='3000' title="integer (500-3000)"></td>
-    </tr>
-    <tr>
-      <th><label for="cameraHeight">CameraHeight (<span id="currentCameraHeight"></span>) :</label></th>
-      <td><input id="cameraHeight" type='range' min='500' max='5000' title="integer (500-5000)"></td>
-    </tr>
-    <tr>
-      <th><label for="drawDistance">Draw Distance (<span id="currentDrawDistance"></span>) :</label></th>
-      <td><input id="drawDistance" type='range' min='100' max='500' title="integer (100-500)"></td>
-    </tr>
-    <tr>
-      <th><label for="fieldOfView">Field of View (<span id="currentFieldOfView"></span>) :</label></th>
-      <td><input id="fieldOfView" type='range' min='80' max='140' title="integer (80-140)"></td>
-    </tr>
-    <tr>
-      <th><label for="fogDensity">Fog Density (<span id="currentFogDensity"></span>) :</label></th>
-      <td><input id="fogDensity" type='range' min='0' max='50' title="integer (0-50)"></td>
-    </tr>
-  </table>
-
-  <div id='instructions' style="display:none">
-    <p>Use the <b>arrow keys</b> to drive the car.</p>
-  </div>
-
-  <div id="racer">
-    <div id="hud" style="width:100%;position:fixed;left:0;top:0;right:0">
-      <span id="speed"            class="hud"><span id="speed_value" class="value">0</span> mph</span>
-      <span id="current_lap_time" class="hud">Time: <span id="current_lap_time_value" class="value">0.0</span></span> 
-      <span id="last_lap_time"    class="hud">Last Lap: <span id="last_lap_time_value" class="value">0.0</span></span>
-      <span id="fast_lap_time"    class="hud">Fastest Lap: <span id="fast_lap_time_value" class="value">0.0</span></span>
+<body>
+    <div>
+        <a id="home" href="/"><button><i class="fa fa-home fa-lg"></i></button></a>
     </div>
-    <canvas id="canvas" style="width:100%;height:100%;position:fixed;left:0;top:0;right:0;bottom:0">
-      Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
-    </canvas>
-    Loading...
-  </div>
+    <div>
+        <button id="settings"><i class="fa fa-gear fa-lg"></i></button></a>
+    </div>
+    
+    <div id="settings-content" style="margin-top: 15px; text-align: center;">
+        <form action="" id="theForm">
+            <label for="width">width: </label>
+            <input value="960" size="3" type="text" id="width" name="width">
+            <label for="height">height: </label>
+            <input value="600" size="3" type="text" id="height" name="height">
+            <input style="cursor: pointer;" type="submit" value="set" id="submit-btn">
+        </form>
+    </div>
 
-  <audio id='music'>
-    <source src="music/racer.ogg">
-    <source src="music/racer.mp3">
-  </audio>
-  <span id="mute" style="display:none"></span>
+    <iframe id="frame" src="game.html" height="600px" width="960px" scrolling="no"></iframe>
+    <div style="text-align: center;">
+        <a href="./game.html"><button title="Open game directly"><i class="fa fa-external-link fa-lg"></i></button></a>
+        <button id="fullscreen-btn" title="Enter fullscreen" onclick="toggleFullScreen();"><i class="fa fa-expand fa-lg"></i></button>
+    </div>
+</body>
 
-  <script src="js/stats.js"></script>
-  <script src="js/common.js"></script>
-  <script src="js/main.js"></script>
+<script>
+    var form = document.getElementById("theForm"),
+        frame = document.getElementById("frame"),
+        btn = document.getElementById("settings"),
+        settings = document.getElementById("settings-content");
 
-</body> 
+    form.addEventListener("submit", function(e) {
+        var width = form.elements["width"].value,
+            height = form.elements["height"].value;
+
+        frame.style.width = width + "px";
+        frame.style.height = height + "px";
+    
+        e.preventDefault();
+
+    });
+
+    function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            frame.requestFullscreen();
+        } else if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    };
+
+    document.addEventListener(
+    "keydown",
+    (e) => {
+        if (e.keyCode === 82) {
+        location.reload();
+        }
+    },
+    false,
+    );
+
+    document.addEventListener(
+    "keydown",
+    (e) => {
+        if (e.keyCode === 70) {
+        toggleFullScreen();
+        }
+    },
+    false,
+    );
+
+    btn.onclick = function() {
+        if (settings.style.display == "none") {
+            settings.style.display = "block"
+        } else {
+            settings.style.display = "none"
+        }
+    };
+</script>
+
 </html>
