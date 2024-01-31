@@ -30,6 +30,10 @@
         </form>
     </div>
 
+    <div style="margin-top: 25px; text-align: center; color:white; font-family: sans-serif;">
+        <span id="fps"></span>
+    </div>
+
     <iframe id="frame" src="game.html" height="600px" width="960px"></iframe>
     <div style="text-align: center;">
         <a href="./game.html"><button title="Open game directly"><i class="fa fa-external-link fa-lg"></i></button></a>
@@ -61,6 +65,30 @@
         }
     };
 
+    function fpsMeter() {
+        let prevTime = Date.now(),
+            frames = 0;
+
+        requestAnimationFrame(function loop() {
+        const time = Date.now();
+        frames++;
+        if (time > prevTime + 1000) {
+            let fps = Math.round( ( frames * 1000 ) / ( time - prevTime ) );
+            prevTime = time;
+            frames = 0;
+
+            if (fps > 65) {
+                output = 'FPS: ' + fps + 'hz -- YOUR CURRENT FRAME RATE IS TOO HIGH! (the best fps setting for this game is 59.9hz)'
+                document.getElementById("fps").textContent = output
+            } else {
+                document.getElementById("fps").textContent = 'Current FPS: ' + fps 
+            }
+        }
+
+        requestAnimationFrame(loop);
+        });
+    }
+
     function toggleFullScreen() {
         if (!document.fullscreenElement) {
             frame.requestFullscreen();
@@ -78,6 +106,8 @@
     },
     false,
     );
+
+    fpsMeter();
 </script>
 
 </html>
