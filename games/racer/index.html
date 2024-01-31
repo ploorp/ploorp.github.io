@@ -17,7 +17,7 @@
         <a id="home" href="/"><button><i class="fa fa-home fa-lg"></i></button></a>
     </div>
     <div>
-        <button id="settings"><i class="fa fa-gear fa-lg"></i></button></a>
+        <button id="settings"><i class="fa fa-gear fa-lg"></i></button>
     </div>
     
     <div id="settings-content" style="display: none; margin-top: 15px; text-align: center;">
@@ -43,6 +43,8 @@
         btn = document.getElementById("settings"),
         settings = document.getElementById("settings-content");
 
+    frame.focus();
+
     form.addEventListener("submit", function(e) {
         var width = form.elements["width"].value,
             height = form.elements["height"].value;
@@ -66,7 +68,8 @@
     "keydown",
     (e) => {
         if (e.keyCode === 82) {
-        location.reload();
+        //location.reload();
+        frame.reload();
         }
     },
     false,
