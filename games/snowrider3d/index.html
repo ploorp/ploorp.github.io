@@ -72,16 +72,16 @@
         requestAnimationFrame(function loop() {
         const time = Date.now();
         frames++;
-        if (time > prevTime + 1000) {
-            let fps = Math.round( ( frames * 1000 ) / ( time - prevTime ) );
+        if (time > prevTime + 100) {
+            let fps = (( frames * 1000 ) / ( time - prevTime )).toFixed(2);
             prevTime = time;
             frames = 0;
 
             if (fps > 65) {
-                output = 'FPS: ' + fps + 'hz -- YOUR CURRENT FRAME RATE IS TOO HIGH! (the best fps setting for this game is 59.9hz)'
-                document.getElementById("fps").textContent = output
+                output = `FPS: ${fps}hz<br>Your current frame rate is too high! (set your FPS to 59.9hz and reload)`;
+                document.getElementById("fps").innerHTML = output;
             } else {
-                document.getElementById("fps").textContent = 'Current FPS: ' + fps 
+                document.getElementById("fps").textContent = `Current FPS: ${fps}hz`;
             }
         }
 
