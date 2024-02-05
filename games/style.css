@@ -1,0 +1,35 @@
+
+@font-face {
+    font-family: Papyrus;
+    src: url(../PAPYRUS.TTF);
+}
+
+h3 {
+    color: white;
+    font-family: Papyrus;
+}
+h1 {
+    color: white;
+    font-family: Papyrus;
+    font-weight: bold;
+}
+p {
+    color: white;
+    font-family: Papyrus;
+    font-size: 13px;
+}
+body {
+    background-color: rgb(20, 20, 20);
+}
+a {
+    font-family: Papyrus;
+}
+a:link {
+    color: pink;
+}
+a:visited {
+    color: pink;
+}
+a:hover {
+    color: red;
+}
