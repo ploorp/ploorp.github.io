@@ -1,28 +1,28 @@
 
 @font-face {
-    font-family: Papyrus;
-    src: url(../PAPYRUS.TTF);
+    font-family: cascadia;
+    src: url(../Cascadia.ttf);
 }
 
 h3 {
     color: white;
-    font-family: Papyrus;
+    font-family: cascadia;
 }
 h1 {
     color: white;
-    font-family: Papyrus;
+    font-family: cascadia;
     font-weight: bold;
 }
 p {
     color: white;
-    font-family: Papyrus;
+    font-family: cascadia;
     font-size: 13px;
 }
 body {
     background-color: rgb(30, 30, 34);
 }
 a {
-    font-family: Papyrus;
+    font-family: cascadia;
 }
 a:link {
     color: pink;

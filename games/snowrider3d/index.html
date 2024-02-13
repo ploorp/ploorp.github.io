@@ -78,10 +78,10 @@
             frames = 0;
 
             if (fps > 65) {
-                output = `FPS: ${fps}hz<br>Your current frame rate is too high! (set your FPS to 59.9hz and reload)`;
+                output = `FPS: ${fps}<br>Your current frame rate is too high! Please set your FPS to 60)`;
                 document.getElementById("fps").innerHTML = output;
             } else {
-                document.getElementById("fps").textContent = `Current FPS: ${fps}hz`;
+                document.getElementById("fps").textContent = `Current FPS: ${fps}`;
             }
         }
 
