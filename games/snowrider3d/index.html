@@ -47,6 +47,8 @@
         btn = document.getElementById("settings"),
         settings = document.getElementById("settings-content");
 
+    frame.focus();
+
     form.addEventListener("submit", function(e) {
         var width = form.elements["width"].value,
             height = form.elements["height"].value;
@@ -56,6 +58,17 @@
     
         e.preventDefault();
     });
+
+    document.addEventListener(
+    "keydown",
+    (e) => {
+        if (e.keyCode === 82) {
+        //location.reload();
+        frame.reload();
+        }
+    },
+    false,
+    );
 
     btn.onclick = function() {
         if (settings.style.display == "none") {
