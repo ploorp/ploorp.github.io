@@ -4,13 +4,13 @@
 }
 
 @font-face {
-    font-family: Papyrus;
-    src: url(PAPYRUS.TTF);
+    font-family: reey;
+    src: url(Reey-Regular.otf);
 }
 
 @font-face {
-    font-family: reey;
-    src: url(Reey-Regular.otf);
+    font-family: cascadia;
+    src: url(Cascadia.ttf);
 }
 
 h1 {
@@ -37,12 +37,6 @@ button {
     margin: 0;
     padding: 0;
 }
-
-a {
-    font-family: sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-}
 a:link {
     color: pink;
 }
@@ -56,7 +50,7 @@ a:hover {
 form {
     display: inline-block;
 }
-div {
+#container {
     width: 200px;
     height: 250px;
     
@@ -66,4 +60,16 @@ div {
     left: 0;
     right: 0;
     margin: auto;
+}
+#version {
+    color: white;
+    font-family: cascadia;
+    font-size: 15px;
+
+    position: absolute;
+    top: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
 }

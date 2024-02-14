@@ -8,20 +8,28 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <div id="parent">
-            <div id="child">
-                <h1>PLOORP</h1>
-                <form action="/games/snowrider3d/">
-                    <button type="submit"><img src="snow-rider.gif"></button>
-                </form>
-                <form action="/games">
-                    <button type="submit"><img src="ploorp.gif"></button>
-                </form><br>
-                <form action="/bookmarks">
-                    <button type="submit"><img src="bookmarks.gif"></button>
-                </form>
-            </div>
+        <div id="container">
+            <h1>PLOORP</h1>
+            <form action="/games/snowrider3d/">
+                <button type="submit"><img src="snow-rider.gif"></button>
+            </form>
+            <form action="/games">
+                <button type="submit"><img src="ploorp.gif"></button>
+            </form><br>
+            <form action="/bookmarks">
+                <button type="submit"><img src="bookmarks.gif"></button>
+            </form>
         </div>
+        <div id="version"><a href="https://github.com/ploorp/ploorp.github.io" target="_blank">&lt;code&gt;</a> last updated: <span id="message">Loading</span></div>
     </body>
+    <script>
+        fetch('https://api.github.com/repos/ploorp/ploorp.github.io/commits?per_page=1')
+            .then(res => res.json())
+            .then(res => {
+                var date = res[0].commit.author.date;
+                var date = new Date(date).toLocaleString();
+                document.getElementById('message').innerHTML = date;
+        })
+    </script>
 </html>
 
