@@ -27,7 +27,7 @@ p {
     font-size: 13px;
 }
 body {
-    background-color: rgb(30, 30, 34);
+    background-color: rgb(21, 21, 25);
 }
 button {
     border: none;
@@ -55,4 +55,15 @@ a:hover {
 
 form {
     display: inline-block;
+}
+div {
+    width: 200px;
+    height: 250px;
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
