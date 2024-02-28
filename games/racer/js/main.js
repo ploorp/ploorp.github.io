@@ -65,7 +65,7 @@
       var playerW       = SPRITES.PLAYER_STRAIGHT.w * SPRITES.SCALE;
       var speedPercent  = speed/maxSpeed;
       var dx            = dt * 2 * speedPercent; // at top speed, should be able to cross from left to right (-1 to 1) in 1 second
-      var startPosition = position;
+      var startPosition = position
 
       updateCars(dt, playerSegment, playerW);
 
