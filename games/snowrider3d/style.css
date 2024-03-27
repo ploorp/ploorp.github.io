@@ -9,12 +9,13 @@ iframe {
     margin: 20px auto;
 }
         
-p {margin: 0; 
-    color: white; 
-    margin-right: 20px;
+p {
+    color: white;
+    margin: 0 20px 0 0;
 }
         
-a {font-size: 16px; 
+a {
+    font-size: 16px;
     color: black; 
     background-color: white; 
     text-decoration: none; 
@@ -36,19 +37,18 @@ form {
 }
         
 #home {
-    position: absolute; 
+    position: absolute;
     border-radius: 5px; 
-    margin: 0; 
-    top: 2%; 
-    left: 1%;
+    margin: 20px 0 0 20px;
+    top: 0;
 }
         
 #settings {
-    position: absolute; 
-    border-radius: 5px; 
-    margin: 0; 
-    top: 2%; 
-    left: 97%;
+    position: absolute;
+    border-radius: 5px;
+    margin: 20px 20px 0 0;
+    right: 0;
+    top: 0;
 }
         
 #submit-btn {
