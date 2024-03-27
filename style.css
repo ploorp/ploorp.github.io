@@ -1,16 +1,16 @@
 @font-face {
     font-family: Font1942;
-    src: url(1942.ttf);
+    src: url(assets/fonts/1942.ttf);
 }
 
 @font-face {
     font-family: reey;
-    src: url(Reey-Regular.otf);
+    src: url(/assets/fonts/Reey-Regular.otf);
 }
 
 @font-face {
     font-family: cascadia;
-    src: url(Cascadia.ttf);
+    src: url(/assets/fonts/Cascadia.ttf);
 }
 
 h1 {
