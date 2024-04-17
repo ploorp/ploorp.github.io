@@ -41,6 +41,7 @@
     var totalCars      = 200;                     // total number of cars on the road
     var currentLapTime = 0;                       // current lap time
     var lastLapTime    = null;                    // last lap time
+    var instantAccel   = true
 
     var keyLeft        = false;
     var keyRight       = false;
@@ -59,6 +60,12 @@
     //=========================================================================
 
     function update(dt) {
+        if (instantAccel)
+            if (currentLapTime === 0)
+                var accel = 1000000;
+            else
+                var accel = maxSpeed/5;
+
 
       var n, car, carW, sprite, spriteW;
       var playerSegment = findSegment(position+playerZ);
