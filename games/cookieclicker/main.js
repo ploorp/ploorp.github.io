@@ -267,7 +267,7 @@ var SimpleBeautify=function(val)
 }
 
 var beautifyInTextFilter=/(([\d]+[,]*)+)/g;//new regex
-function BeautifyInTextFunction(str){return Beautify(parseInt(str.replace(/,/g,''),10));};
+function BeautifyInTextFunction(str){return Beautify(parseInt(str.replace(/,/g,''),10));}
 function BeautifyInText(str) {return str.replace(beautifyInTextFilter,BeautifyInTextFunction);}//reformat every number inside a string
 function BeautifyAll()//run through upgrades and achievements to reformat the numbers
 {
@@ -848,7 +848,7 @@ var Loader=function()//asset-loading system
 		{
 			for (var i=0;i<assets.length;i++)
 			{
-				if (me.assetsLoaded.indexOf(assets[i])==-1) {setTimeout(checkLoadedLoop,200);return false};
+				if (me.assetsLoaded.indexOf(assets[i])==-1) {setTimeout(checkLoadedLoop,200);return false}
 			}
 			callback();
 			return true;
@@ -2767,7 +2767,7 @@ Game.Launch=function()
 			{
 				var me=Game.UpgradesById[i];
 				if (me.vanilla) toCompress.push(Math.min(me.unlocked,1),Math.min(me.bought,1));
-			};
+			}
 			
 			toCompress=pack3(toCompress.join(''));//toCompress=pack(toCompress);//CompressLargeBin(toCompress);
 			
