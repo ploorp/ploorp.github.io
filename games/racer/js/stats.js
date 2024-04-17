@@ -134,10 +134,10 @@ var Stats = function () {
     update: function () {
 
       startTime = this.end();
-      
+
     }
 
   }
-  
+
 };
 
