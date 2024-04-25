@@ -61,10 +61,14 @@ var hud = {
 
 function update(dt) {
     if (instantAccel)
-        if (currentLapTime === 0)
-            var accel = 1000000;
-        else
-            var accel = maxSpeed/5;
+        if (currentLapTime === 0) {
+            accel = 1000000;
+            //var instantAccel = false;
+        }
+        else {
+            accel = maxSpeed/5;
+            instantAccel = false;
+        }
 
 
     var n, car, carW, sprite, spriteW;
