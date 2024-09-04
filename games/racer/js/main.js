@@ -41,7 +41,7 @@ var offRoadLimit   =  maxSpeed/4;             // limit when off road deceleratio
 var totalCars      = 200;                     // total number of cars on the road
 var currentLapTime = 0;                       // current lap time
 var lastLapTime    = null;                    // last lap time
-var instantAccel   = true
+var instantAccel   = false;
 
 var keyLeft        = false;
 var keyRight       = false;
