@@ -1,0 +1,59 @@
+body {
+    margin: 0; 
+    background-color: black;
+}
+        
+iframe {
+    border: none; 
+    display: block; 
+    margin: 20px auto;
+}
+        
+p {
+    color: white;
+    margin: 0 20px 0 0;
+}
+        
+a {
+    font-size: 16px;
+    color: black; 
+    background-color: white; 
+    text-decoration: none; 
+    text-align: center;
+}
+        
+button {
+    cursor: pointer; 
+    font-size: 16px; 
+    background-color: white; 
+    padding: 7px 7px; 
+    border-radius: 5px; 
+    border: none; 
+    text-align: center;
+}
+        
+form {
+    color: white;
+}
+        
+#home {
+    position: absolute;
+    border-radius: 5px; 
+    margin: 20px 0 0 20px;
+    top: 0;
+}
+        
+#settings {
+    position: absolute;
+    border-radius: 5px;
+    margin: 20px 20px 0 0;
+    right: 0;
+    top: 0;
+}
+        
+#submit-btn {
+    border-radius: 2px; 
+    background-color: white; 
+    border: none; 
+    padding: 2px 5px;
+}
