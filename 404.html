@@ -12,16 +12,26 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
       .container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
       }
+      .container img {
+        max-width: 90%;
+        max-height: 90%;
+      }
     </style>
     <body>
         <div class="container">
-            <img width="800px" src="/loglady.jpg">
+            <img src="/loglady.jpg" alt="404 Image">
         </div>
     </body>
 </html>
