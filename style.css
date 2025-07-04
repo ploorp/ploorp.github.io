@@ -13,6 +13,16 @@
     src: url(/assets/fonts/Cascadia.ttf);
 }
 
+@font-face {
+    font-family: papyrus;
+    src: url(/assets/fonts/PAPYRUS.TTF);
+}
+
+@font-face {
+    font-family: aquiline;
+    src: url(/assets/fonts/AquilineTwo.ttf);
+}
+
 h1 {
     color: white;
     font-family: reey;
@@ -73,3 +83,38 @@ form {
     right: 0;
     padding: 10px;
 }
+
+#commands-info {
+    color: white;
+    font-family: cascadia;
+    font-size: 16px;
+}
+#commands-header {
+    font-family: Font1942;
+    font-size: 30px;
+    color: white;
+    margin-top: 20px;
+}
+table {
+    color: white;
+    font-family: cascadia;
+    font-size: 16px;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #8f8f8f;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #494949;
+    font-weight: bold;
+}
+tr:nth-child(even) {
+    background-color: #0b0b0b;
+}
+col.command-col { width: 20%; }
+col.usage-col { width: 30%; }
+col.description-col { width: 50%; }

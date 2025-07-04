@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Bot commands</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="commands-header">Bot commands</h1>
+    <p id="commands-info">parameters with an asterix are required, you can also pipe in parameters by replying to a message</p>
+    <table>
+        <colgroup>
+            <col class="command-col">
+            <col class="usage-col">
+            <col class="description-col">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Usage</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>%help (%commands, %cmds)</td>
+                <td>%help</td>
+                <td>gives a link to this page</td>
+            </tr>
+            <tr>
+                <td>%ping</td>
+                <td>%ping</td>
+                <td>just says the uptime of the bot</td>
+            </tr>
+            <tr>
+                <td>%letterboxd (%boxd, %lb)</td>
+                <td>%letterboxd [username]</td>
+                <td>returns some information about a letterboxd user's most recently logged film</td>
+            </tr>
+            <tr>
+                <td>%movie (%film, %mv)</td>
+                <td>%movie *[query]</td>
+                <td>returns some information about a movie on letterboxd</td>
+            </tr>
+            <tr>
+                <td>%connections (%conn, %c)</td>
+                <td>%connections [user]</td>
+                <td>lists the potatbotat connections of a user</td>
+            </tr>
+            <tr>
+                <td>%listcmds (%listcmd, %lc)</td>
+                <td>%listcmds [channel]</td>
+                <td>returns a link to a channels custom potatbotat commands</td>
+            </tr>
+            <tr>
+                <td>%searchlogs (%sl)</td>
+                <td>%searchlogs *[channel] *[user] *[query]</td>
+                <td>search somebodys logs for something using bestlogs</td>
+            </tr>
+            <tr>
+                <td>%namechange (%nc)</td>
+                <td>%namechange [user]</td>
+                <td>view a users previous usernames</td>
+            </tr>
+            <tr>
+                <td>%unicode (%u)</td>
+                <td>%unicode [message]</td>
+                <td>gives you a link to a website that lets you identify what unicode characters a message contains</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p id="commands-info">commands only whitelisted users can run</p>
+    <table>
+        <colgroup>
+            <col class="command-col">
+            <col class="usage-col">
+            <col class="description-col">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>Usage</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>%echo</td>
+                <td>%echo *[message] in:[channel]</td>
+                <td>repeats your message somewhere (where the bot is joined)</td>
+            </tr>
+            <tr>
+                <td>%join</td>
+                <td>%join *[channel]</td>
+                <td>temporarily joins a channel</td>
+            </tr>
+            <tr>
+                <td>%part</td>
+                <td>%part [channel]</td>
+                <td>temporarily parts a channel</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
