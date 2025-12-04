@@ -1,0 +1,24 @@
+.content {
+    text-align: center;
+}
+
+#map {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#habitat {
+    width: 90%;
+    max-width: 800px;
+}
+
+#conservation {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 700px;
+    font-size: 20px;
+}
+
+#caption {
+    font-style: italic;
+}

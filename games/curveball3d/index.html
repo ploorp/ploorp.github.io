@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Curve Ball 3D</title>
+</head>
+
+<body>
+    <div>
+        <a id="home" href="../"><button><i class="fa fa-home fa-lg"></i></button></a>
+    </div>
+    <div>
+        <button id="settings"><i class="fa fa-gear fa-lg"></i></button>
+    </div>
+    
+    <div id="settings-content" style="display: none; margin-top: 15px; text-align: center;">
+        <form action="" id="theForm">
+            <label for="width">width: </label>
+            <input value="960" size="3" type="text" id="width" name="width">
+            <label for="height">height: </label>
+            <input value="750" size="3" type="text" id="height" name="height">
+            <input style="cursor: pointer;" type="submit" value="set" id="submit-btn">
+        </form>
+    </div>
+
+    <iframe scrolling="no" id="frame" src="game.html" height="750px" width="960px"></iframe>
+    <div style="text-align: center;">
+        <a href="./game.html"><button title="Open game directly"><i class="fa fa-external-link fa-lg"></i></button></a>
+        <button id="fullscreen-btn" title="Enter fullscreen" onclick="toggleFullScreen();"><i class="fa fa-expand fa-lg"></i></button>
+    </div>
+</body>
+
+<script>
+    var form = document.getElementById("theForm"),
+        frame = document.getElementById("frame"),
+        btn = document.getElementById("settings"),
+        settings = document.getElementById("settings-content");
+
+    form.addEventListener("submit", function(e) {
+        var width = form.elements["width"].value,
+            height = form.elements["height"].value;
+
+        frame.style.width = width + "px";
+        frame.style.height = height + "px";
+    
+        e.preventDefault();
+    });
+
+    btn.onclick = function() {
+        if (settings.style.display === "none") {
+            settings.style.display = "block"
+        } else {
+            settings.style.display = "none"
+        }
+    };
+
+    function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            frame.requestFullscreen();
+        } else if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+
+    document.addEventListener(
+    "keydown",
+    (e) => {
+        if (e.keyCode === 70) {
+        toggleFullScreen();
+        }
+    },
+    false,
+    );
+</script>
+
+</html>
