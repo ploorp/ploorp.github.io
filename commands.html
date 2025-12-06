@@ -68,10 +68,14 @@
                 <td>returns a users rating and review of a *logged* movie on letterboxd</td>
             </tr>
             <tr>
-                <td>%song (%s)</td>
+                <td>%song (%s, %sc)</td>
                 <td>%song [username]</td>
-                <td>shows a lastfm user's most recently played song</td>
+                <td>shows a lastfm user's most recently played song, %sc to include play count</td>
             </tr>
+            <tr>
+                <td>%whoknows (%wk)</td>
+                <td>%whoknows [artist]</td>
+                <td>shows #plays of users that have lastfm linked for an artist</td>
             <tr>
                 <td>%fortune (%f, %cookie)</td>
                 <td>%fortune</td>
@@ -84,7 +88,7 @@
             </tr>
             <tr>
                 <td>%connections (%conn, %c)</td>
-                <td>%connections [user]</td>
+                <td>%connections [user] [platform]</td>
                 <td>lists the potatbotat connections of a user</td>
             </tr>
             <tr>
@@ -96,6 +100,11 @@
                 <td>%namechange (%nc)</td>
                 <td>%namechange [user]</td>
                 <td>view a user's previous usernames</td>
+            </tr>
+            <tr>
+                <td>%newname (%nn)</td>
+                <td>%newname [username]</td>
+                <td>try to find a current username from an old one using supibot database</td>
             </tr>
             <tr>
                 <td>%unicode (%u)</td>
