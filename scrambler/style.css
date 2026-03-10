@@ -15,6 +15,12 @@ h1 {
     font-family: reey;
 }
 
+#cheating {
+    color: red;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
 input[type="file"], select {
     box-sizing: border-box;
     height: 50px;
