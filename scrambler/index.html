@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornish Song Scrambler</title>
+    <link rel="stylesheet" href="scrambler/style.css">
+</head>
+<body>
+    <h1>Cornish Song Scrambler</h1>
+    <p>Download the csv file of a playlist you want to check from <a href="https://exportify.app" target="_blank">Exportify</a> and upload it below to find songs that match 6 "Cornish Characters"</p>
+    
+    <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
+        <input type="file" id="csvFileInput" accept=".csv">
+        <select id="sortMethod">
+            <option value="length">Sort by Title Length</option>
+            <option value="alpha">Sort by Title</option>
+            <option value="artist">Sort by Artist</option>
+        </select>
+    </div>
+    
+    <div id="statusMessage" style="margin-top: 10px; font-weight: bold; color: #e74c3c;"></div>
+    <table id="resultsTable" style="display:none;">
+        <thead>
+            <tr>
+                <th>Track Name</th>
+                <th>Artist Name(s)</th>
+            </tr>
+        </thead>
+        <tbody id="resultsBody">
+        </tbody>
+    </table>
+    <script src="scrambler/main.js"></script>
+</body>
+</html>
