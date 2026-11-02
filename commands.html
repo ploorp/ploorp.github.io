@@ -23,7 +23,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>%help (%commands, %cmds)</td>
+                <td>%help (%commands)</td>
                 <td>%help</td>
                 <td>gives a link to this page</td>
             </tr>
@@ -44,13 +44,13 @@
             </tr>
             <tr>
                 <td>%join (%part)</td>
-                <td>%join</td>
-                <td>join or part bot in your channel</td>
+                <td>%join [channel]</td>
+                <td>join or part the bot in a channel</td>
             </tr>
             <tr>
                 <td>%link (%unlink)</td>
-                <td>%link *[lastfm|letterboxd] *[username]</td>
-                <td>link or unlink your lastfm or letterboxd account</td>
+                <td>%link *[lastfm|letterboxd|osu] *[username]</td>
+                <td>link or unlink an external account</td>
             </tr>
             <tr>
                 <td>%letterboxd (%boxd, %lb)</td>
@@ -63,22 +63,58 @@
                 <td>returns some information about a movie on letterboxd</td>
             </tr>
             <tr>
-                <td>%rating (%rt, %review)</td>
-                <td>%rating *[username] *[query]</td>
-                <td>returns a users rating and review of a *logged* movie on letterboxd</td>
+                <td>%moviegame (%mg, %higherlower, %hl)</td>
+                <td>%moviegame [left|right|1|2|leaderboard|stats|best]</td>
+                <td>plays the letterboxd higher/lower game or shows its leaderboard and stats</td>
+            </tr>
+            <tr>
+                <td>%rating (%review, %rt)</td>
+                <td>%rating [username] *[query]</td>
+                <td>returns a user's rating and review of a logged movie on letterboxd</td>
             </tr>
             <tr>
                 <td>%song (%s, %sc)</td>
                 <td>%song [username]</td>
-                <td>shows a lastfm user's most recently played song, %sc to include play count</td>
+                <td>shows a lastfm user's most recently played song; %sc includes play count</td>
             </tr>
             <tr>
                 <td>%whoknows (%wk, %w)</td>
-                <td>%whoknows [artist]</td>
-                <td>shows #plays of users that have lastfm linked for an artist</td>
+                <td>%whoknows [artist] [flags]</td>
+                <td>shows play counts for users with lastfm linked for an artist</td>
+            </tr>
+            <tr>
+                <td>%wkt</td>
+                <td>%wkt *[artist - track or track] [flags]</td>
+                <td>shows users that know a track</td>
+            </tr>
+            <tr>
+                <td>%artist (%a)</td>
+                <td>%artist [username] [artist]</td>
+                <td>shows an artist's top tracks, optionally for another user</td>
+            </tr>
+            <tr>
+                <td>%plays (%p)</td>
+                <td>%plays [username] [artist]</td>
+                <td>shows a user's play count for an artist</td>
+            </tr>
+            <tr>
+                <td>%config</td>
+                <td>%config *[system] *[property] *[value]</td>
+                <td>configures lastfm or whoknows preferences</td>
+            </tr>
+            <tr>
+                <td>%trivia (%triv)</td>
+                <td>%trivia [category|categories|skip|stats|leaderboard] [flags]</td>
+                <td>starts trivia or shows trivia categories, stats, and leaderboard</td>
+            </tr>
+            <tr>
+                <td>%paste</td>
+                <td>%paste *[text]</td>
+                <td>uploads text and returns a paste link</td>
+            </tr>
             <tr>
                 <td>%fortune (%f, %cookie)</td>
-                <td>%fortune</td>
+                <td>%fortune [options]</td>
                 <td>daily fortune message with a streak if you do it everyday</td>
             </tr>
             <tr>
@@ -93,8 +129,8 @@
             </tr>
             <tr>
                 <td>%listcmds (%listcmd, %lc)</td>
-                <td>%listcmds [channel]</td>
-                <td>returns a link to a channel's custom potatbotat commands</td>
+                <td>%listcmds [username]</td>
+                <td>returns a link to a user's custom potatbotat commands</td>
             </tr>
             <tr>
                 <td>%namechange (%nc)</td>
@@ -103,8 +139,23 @@
             </tr>
             <tr>
                 <td>%newname (%nn)</td>
-                <td>%newname [username]</td>
+                <td>%newname *[username]</td>
                 <td>try to find a current username from an old one using supibot database</td>
+            </tr>
+            <tr>
+                <td>%randomline (%rl)</td>
+                <td>%randomline [username] or %randomline *[channel] *[username]</td>
+                <td>returns a random line from logs</td>
+            </tr>
+            <tr>
+                <td>%download (%dl)</td>
+                <td>%download [slide-index] *[URL]</td>
+                <td>downloads and hosts supported media when enabled</td>
+            </tr>
+            <tr>
+                <td>%osu</td>
+                <td>%osu [username|recent|top|best]</td>
+                <td>shows an osu! profile, recent plays, or top plays</td>
             </tr>
             <tr>
                 <td>%unicode (%u)</td>
